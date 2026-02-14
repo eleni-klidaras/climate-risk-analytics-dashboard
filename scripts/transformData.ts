@@ -16,20 +16,27 @@ function transformData(): void {
       skipEmptyLines: true,
     });
 
-    const transformedData: FinancialRiskRecord[] = parsed.data.map(
-      (row: RawFinancialRiskRow) => ({
+    if (parsed.errors.length) {
+      console.error(`${parsed.errors.length} parse error(s):`);
+      parsed.errors.forEach((e) => console.error(`Row ${e.row}: ${e.message}`));
+    }
+
+    const transformedData: FinancialRiskRecord[] = parsed.data
+      .map((row: RawFinancialRiskRow) => ({
         climatePathway: row.climate_pathway,
         financialLineItem: row.financial_line_item,
         year: Number(row.year),
         financialLineItemShock: Number(row.financial_line_item_shock),
-      }),
-    );
+      }))
+      .filter((row) => !isNaN(row.year) && !isNaN(row.financialLineItemShock));
 
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(transformedData, null, 2));
 
-    console.log(" ✅ Successfully transformed data");
+    console.log(
+      `✅ Successfully transformed ${transformedData.length} records`,
+    );
   } catch (error) {
-    console.error("❌ Error during transformation: " + error);
+    console.error(" ❌ Error during transformation: " + error);
   }
 }
 transformData();
