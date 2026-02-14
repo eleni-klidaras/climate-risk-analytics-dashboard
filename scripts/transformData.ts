@@ -1,22 +1,12 @@
 import fs from "fs";
 import Papa from "papaparse";
+import {
+  type RawFinancialRiskRow,
+  type FinancialRiskRecord,
+} from "../src/types/types";
 
 const INPUT_FILE = "./src/data/mock_data.csv";
 const OUTPUT_FILE = "./src/data/transformed_mock_data.json";
-
-type RawFinancialRiskRow = {
-  climate_pathway: string;
-  financial_line_item: string;
-  year: string;
-  financial_line_item_shock: string;
-};
-
-type FinancialRiskRecord = {
-  climatePathway: string;
-  financialLineItem: string;
-  year: number;
-  financialLineItemShock: number;
-};
 
 function transformData(): void {
   try {
