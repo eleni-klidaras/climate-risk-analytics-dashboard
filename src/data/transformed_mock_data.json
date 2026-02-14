@@ -1,0 +1,1262 @@
+[
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "EBIT",
+    "year": 2025,
+    "financialLineItemShock": -61579.68896
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "FCFF",
+    "year": 2025,
+    "financialLineItemShock": -49263.75117
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "DCF",
+    "year": 2025,
+    "financialLineItemShock": -32818.19101
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "EBIT",
+    "year": 2026,
+    "financialLineItemShock": 699.8206565
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "FCFF",
+    "year": 2026,
+    "financialLineItemShock": 559.8565252
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "DCF",
+    "year": 2026,
+    "financialLineItemShock": 248.4569017
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "EBIT",
+    "year": 2027,
+    "financialLineItemShock": 874.1907859
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "FCFF",
+    "year": 2027,
+    "financialLineItemShock": 699.3526288
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "DCF",
+    "year": 2027,
+    "financialLineItemShock": 206.755796
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "EBIT",
+    "year": 2028,
+    "financialLineItemShock": 1062.121343
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "FCFF",
+    "year": 2028,
+    "financialLineItemShock": 849.6970745
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "DCF",
+    "year": 2028,
+    "financialLineItemShock": 167.3450092
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "EBIT",
+    "year": 2029,
+    "financialLineItemShock": 1264.460604
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "FCFF",
+    "year": 2029,
+    "financialLineItemShock": 1011.568483
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "DCF",
+    "year": 2029,
+    "financialLineItemShock": 132.7183861
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "EBIT",
+    "year": 2030,
+    "financialLineItemShock": 1482.105047
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "FCFF",
+    "year": 2030,
+    "financialLineItemShock": 1185.684038
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "DCF",
+    "year": 2030,
+    "financialLineItemShock": 103.6315361
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "EBIT",
+    "year": 2031,
+    "financialLineItemShock": 1516.240187
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "FCFF",
+    "year": 2031,
+    "financialLineItemShock": 1212.992149
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "DCF",
+    "year": 2031,
+    "financialLineItemShock": 70.62656965
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "EBIT",
+    "year": 2032,
+    "financialLineItemShock": 1737.310948
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "FCFF",
+    "year": 2032,
+    "financialLineItemShock": 1389.848758
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "DCF",
+    "year": 2032,
+    "financialLineItemShock": 53.90944078
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "EBIT",
+    "year": 2033,
+    "financialLineItemShock": 1974.226374
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "FCFF",
+    "year": 2033,
+    "financialLineItemShock": 1579.381099
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "DCF",
+    "year": 2033,
+    "financialLineItemShock": 40.81044967
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "EBIT",
+    "year": 2034,
+    "financialLineItemShock": 2227.932815
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "FCFF",
+    "year": 2034,
+    "financialLineItemShock": 1782.346252
+  },
+  {
+    "climatePathway": "Current Policies",
+    "financialLineItem": "DCF",
+    "year": 2034,
+    "financialLineItemShock": 30.68058818
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "EBIT",
+    "year": 2025,
+    "financialLineItemShock": -61579.68896
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "FCFF",
+    "year": 2025,
+    "financialLineItemShock": -49263.75117
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "DCF",
+    "year": 2025,
+    "financialLineItemShock": -32818.19101
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "EBIT",
+    "year": 2026,
+    "financialLineItemShock": 699.8206565
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "FCFF",
+    "year": 2026,
+    "financialLineItemShock": 559.8565252
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "DCF",
+    "year": 2026,
+    "financialLineItemShock": 248.4569017
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "EBIT",
+    "year": 2027,
+    "financialLineItemShock": 874.1907859
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "FCFF",
+    "year": 2027,
+    "financialLineItemShock": 699.3526288
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "DCF",
+    "year": 2027,
+    "financialLineItemShock": 206.755796
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "EBIT",
+    "year": 2028,
+    "financialLineItemShock": 1062.121343
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "FCFF",
+    "year": 2028,
+    "financialLineItemShock": 849.6970745
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "DCF",
+    "year": 2028,
+    "financialLineItemShock": 167.3450092
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "EBIT",
+    "year": 2029,
+    "financialLineItemShock": 1264.460604
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "FCFF",
+    "year": 2029,
+    "financialLineItemShock": 1011.568483
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "DCF",
+    "year": 2029,
+    "financialLineItemShock": 132.7183861
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "EBIT",
+    "year": 2030,
+    "financialLineItemShock": 1482.105047
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "FCFF",
+    "year": 2030,
+    "financialLineItemShock": 1185.684038
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "DCF",
+    "year": 2030,
+    "financialLineItemShock": 103.6315361
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "EBIT",
+    "year": 2031,
+    "financialLineItemShock": 1723.089764
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "FCFF",
+    "year": 2031,
+    "financialLineItemShock": 1378.471811
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "DCF",
+    "year": 2031,
+    "financialLineItemShock": 80.26163683
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "EBIT",
+    "year": 2032,
+    "financialLineItemShock": 1964.965874
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "FCFF",
+    "year": 2032,
+    "financialLineItemShock": 1571.972699
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "DCF",
+    "year": 2032,
+    "financialLineItemShock": 60.9736625
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "EBIT",
+    "year": 2033,
+    "financialLineItemShock": 2224.221084
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "FCFF",
+    "year": 2033,
+    "financialLineItemShock": 1779.376867
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "DCF",
+    "year": 2033,
+    "financialLineItemShock": 45.97824435
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "EBIT",
+    "year": 2034,
+    "financialLineItemShock": 2501.901348
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "FCFF",
+    "year": 2034,
+    "financialLineItemShock": 2001.521078
+  },
+  {
+    "climatePathway": "Fragmented World",
+    "financialLineItem": "DCF",
+    "year": 2034,
+    "financialLineItemShock": 34.45337509
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "EBIT",
+    "year": 2025,
+    "financialLineItemShock": -61409.06814
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "FCFF",
+    "year": 2025,
+    "financialLineItemShock": -49127.25451
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "DCF",
+    "year": 2025,
+    "financialLineItemShock": -32727.26059
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "EBIT",
+    "year": 2026,
+    "financialLineItemShock": 885.3211575
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "FCFF",
+    "year": 2026,
+    "financialLineItemShock": 708.256926
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "DCF",
+    "year": 2026,
+    "financialLineItemShock": 314.3150316
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "EBIT",
+    "year": 2027,
+    "financialLineItemShock": 1075.514717
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "FCFF",
+    "year": 2027,
+    "financialLineItemShock": 860.411774
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "DCF",
+    "year": 2027,
+    "financialLineItemShock": 254.3711339
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "EBIT",
+    "year": 2028,
+    "financialLineItemShock": 1280.268778
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "FCFF",
+    "year": 2028,
+    "financialLineItemShock": 1024.215022
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "DCF",
+    "year": 2028,
+    "financialLineItemShock": 201.7157378
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "EBIT",
+    "year": 2029,
+    "financialLineItemShock": 1500.491017
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "FCFF",
+    "year": 2029,
+    "financialLineItemShock": 1200.392814
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "DCF",
+    "year": 2029,
+    "financialLineItemShock": 157.4922505
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "EBIT",
+    "year": 2030,
+    "financialLineItemShock": 1737.140564
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "FCFF",
+    "year": 2030,
+    "financialLineItemShock": 1389.712451
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "DCF",
+    "year": 2030,
+    "financialLineItemShock": 121.4640929
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "EBIT",
+    "year": 2031,
+    "financialLineItemShock": 1155.765712
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "FCFF",
+    "year": 2031,
+    "financialLineItemShock": 924.6125699
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "DCF",
+    "year": 2031,
+    "financialLineItemShock": 53.83564445
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "EBIT",
+    "year": 2032,
+    "financialLineItemShock": 1335.585487
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "FCFF",
+    "year": 2032,
+    "financialLineItemShock": 1068.46839
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "DCF",
+    "year": 2032,
+    "financialLineItemShock": 41.44374201
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "EBIT",
+    "year": 2033,
+    "financialLineItemShock": 1527.994125
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "FCFF",
+    "year": 2033,
+    "financialLineItemShock": 1222.3953
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "DCF",
+    "year": 2033,
+    "financialLineItemShock": 31.58610794
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "EBIT",
+    "year": 2034,
+    "financialLineItemShock": 1733.715771
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "FCFF",
+    "year": 2034,
+    "financialLineItemShock": 1386.972617
+  },
+  {
+    "climatePathway": "NDCs",
+    "financialLineItem": "DCF",
+    "year": 2034,
+    "financialLineItemShock": 23.87478619
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "EBIT",
+    "year": 2025,
+    "financialLineItemShock": -62471.14635
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "FCFF",
+    "year": 2025,
+    "financialLineItemShock": -49976.91708
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "DCF",
+    "year": 2025,
+    "financialLineItemShock": -33293.28303
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "EBIT",
+    "year": 2026,
+    "financialLineItemShock": -290.9562928
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "FCFF",
+    "year": 2026,
+    "financialLineItemShock": -232.7650343
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "DCF",
+    "year": 2026,
+    "financialLineItemShock": -103.2980355
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "EBIT",
+    "year": 2027,
+    "financialLineItemShock": -223.5101495
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "FCFF",
+    "year": 2027,
+    "financialLineItemShock": -178.8081196
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "DCF",
+    "year": 2027,
+    "financialLineItemShock": -52.86262406
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "EBIT",
+    "year": 2028,
+    "financialLineItemShock": -150.6168135
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "FCFF",
+    "year": 2028,
+    "financialLineItemShock": -120.4934508
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "DCF",
+    "year": 2028,
+    "financialLineItemShock": -23.73078387
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "EBIT",
+    "year": 2029,
+    "financialLineItemShock": -71.9682386
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "FCFF",
+    "year": 2029,
+    "financialLineItemShock": -57.57459088
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "DCF",
+    "year": 2029,
+    "financialLineItemShock": -7.553820537
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "EBIT",
+    "year": 2030,
+    "financialLineItemShock": 12.75855371
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "FCFF",
+    "year": 2030,
+    "financialLineItemShock": 10.20684297
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "DCF",
+    "year": 2030,
+    "financialLineItemShock": 0.892101759
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "EBIT",
+    "year": 2031,
+    "financialLineItemShock": -232.8198929
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "FCFF",
+    "year": 2031,
+    "financialLineItemShock": -186.2559143
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "DCF",
+    "year": 2031,
+    "financialLineItemShock": -10.84476624
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "EBIT",
+    "year": 2032,
+    "financialLineItemShock": -216.1280355
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "FCFF",
+    "year": 2032,
+    "financialLineItemShock": -172.9024284
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "DCF",
+    "year": 2032,
+    "financialLineItemShock": -6.706537792
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "EBIT",
+    "year": 2033,
+    "financialLineItemShock": -202.7784883
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "FCFF",
+    "year": 2033,
+    "financialLineItemShock": -162.2227907
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "DCF",
+    "year": 2033,
+    "financialLineItemShock": -4.191759062
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "EBIT",
+    "year": 2034,
+    "financialLineItemShock": -193.4580229
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "FCFF",
+    "year": 2034,
+    "financialLineItemShock": -154.7664183
+  },
+  {
+    "climatePathway": "Below 2C",
+    "financialLineItem": "DCF",
+    "year": 2034,
+    "financialLineItemShock": -2.664086589
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "EBIT",
+    "year": 2025,
+    "financialLineItemShock": -61579.68896
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "FCFF",
+    "year": 2025,
+    "financialLineItemShock": -49263.75117
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "DCF",
+    "year": 2025,
+    "financialLineItemShock": -32818.19101
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "EBIT",
+    "year": 2026,
+    "financialLineItemShock": 699.8206565
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "FCFF",
+    "year": 2026,
+    "financialLineItemShock": 559.8565252
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "DCF",
+    "year": 2026,
+    "financialLineItemShock": 248.4569017
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "EBIT",
+    "year": 2027,
+    "financialLineItemShock": 874.1907859
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "FCFF",
+    "year": 2027,
+    "financialLineItemShock": 699.3526288
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "DCF",
+    "year": 2027,
+    "financialLineItemShock": 206.755796
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "EBIT",
+    "year": 2028,
+    "financialLineItemShock": 1062.121343
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "FCFF",
+    "year": 2028,
+    "financialLineItemShock": 849.6970745
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "DCF",
+    "year": 2028,
+    "financialLineItemShock": 167.3450092
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "EBIT",
+    "year": 2029,
+    "financialLineItemShock": 1264.460604
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "FCFF",
+    "year": 2029,
+    "financialLineItemShock": 1011.568483
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "DCF",
+    "year": 2029,
+    "financialLineItemShock": 132.7183861
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "EBIT",
+    "year": 2030,
+    "financialLineItemShock": 1482.105047
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "FCFF",
+    "year": 2030,
+    "financialLineItemShock": 1185.684038
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "DCF",
+    "year": 2030,
+    "financialLineItemShock": 103.6315361
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "EBIT",
+    "year": 2031,
+    "financialLineItemShock": 707.5743377
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "FCFF",
+    "year": 2031,
+    "financialLineItemShock": 566.0594702
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "DCF",
+    "year": 2031,
+    "financialLineItemShock": 32.95886014
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "EBIT",
+    "year": 2032,
+    "financialLineItemShock": 831.7521095
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "FCFF",
+    "year": 2032,
+    "financialLineItemShock": 665.4016876
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "DCF",
+    "year": 2032,
+    "financialLineItemShock": 25.8095945
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "EBIT",
+    "year": 2033,
+    "financialLineItemShock": 963.3884545
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "FCFF",
+    "year": 2033,
+    "financialLineItemShock": 770.7107636
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "DCF",
+    "year": 2033,
+    "financialLineItemShock": 19.91479628
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "EBIT",
+    "year": 2034,
+    "financialLineItemShock": 1102.799105
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "FCFF",
+    "year": 2034,
+    "financialLineItemShock": 882.2392837
+  },
+  {
+    "climatePathway": "Delayed Transition",
+    "financialLineItem": "DCF",
+    "year": 2034,
+    "financialLineItemShock": 15.18651054
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "EBIT",
+    "year": 2025,
+    "financialLineItemShock": -64044.70155
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "FCFF",
+    "year": 2025,
+    "financialLineItemShock": -51235.76124
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "DCF",
+    "year": 2025,
+    "financialLineItemShock": -34131.89128
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "EBIT",
+    "year": 2026,
+    "financialLineItemShock": -2167.521985
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "FCFF",
+    "year": 2026,
+    "financialLineItemShock": -1734.017588
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "DCF",
+    "year": 2026,
+    "financialLineItemShock": -769.5340109
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "EBIT",
+    "year": 2027,
+    "financialLineItemShock": -2445.904236
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "FCFF",
+    "year": 2027,
+    "financialLineItemShock": -1956.723389
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "DCF",
+    "year": 2027,
+    "financialLineItemShock": -578.4834218
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "EBIT",
+    "year": 2028,
+    "financialLineItemShock": -2767.301577
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "FCFF",
+    "year": 2028,
+    "financialLineItemShock": -2213.841261
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "DCF",
+    "year": 2028,
+    "financialLineItemShock": -436.0086639
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "EBIT",
+    "year": 2029,
+    "financialLineItemShock": -3137.81802
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "FCFF",
+    "year": 2029,
+    "financialLineItemShock": -2510.254416
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "DCF",
+    "year": 2029,
+    "financialLineItemShock": -329.3468711
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "EBIT",
+    "year": 2030,
+    "financialLineItemShock": -3564.424457
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "FCFF",
+    "year": 2030,
+    "financialLineItemShock": -2851.539566
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "DCF",
+    "year": 2030,
+    "financialLineItemShock": -249.2311747
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "EBIT",
+    "year": 2031,
+    "financialLineItemShock": -9293.18367
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "FCFF",
+    "year": 2031,
+    "financialLineItemShock": -7434.546936
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "DCF",
+    "year": 2031,
+    "financialLineItemShock": -432.877119
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "EBIT",
+    "year": 2032,
+    "financialLineItemShock": -10663.52526
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "FCFF",
+    "year": 2032,
+    "financialLineItemShock": -8530.820206
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "DCF",
+    "year": 2032,
+    "financialLineItemShock": -330.8933752
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "EBIT",
+    "year": 2033,
+    "financialLineItemShock": -12222.61375
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "FCFF",
+    "year": 2033,
+    "financialLineItemShock": -9778.090999
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "DCF",
+    "year": 2033,
+    "financialLineItemShock": -252.661179
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "EBIT",
+    "year": 2034,
+    "financialLineItemShock": -13996.65339
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "FCFF",
+    "year": 2034,
+    "financialLineItemShock": -11197.32272
+  },
+  {
+    "climatePathway": "Net Zero 2050",
+    "financialLineItem": "DCF",
+    "year": 2034,
+    "financialLineItemShock": -192.7461887
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "EBIT",
+    "year": 2025,
+    "financialLineItemShock": -64525.44226
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "FCFF",
+    "year": 2025,
+    "financialLineItemShock": -51620.35381
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "DCF",
+    "year": 2025,
+    "financialLineItemShock": -34388.09654
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "EBIT",
+    "year": 2026,
+    "financialLineItemShock": -2642.308778
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "FCFF",
+    "year": 2026,
+    "financialLineItemShock": -2113.847023
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "DCF",
+    "year": 2026,
+    "financialLineItemShock": -938.0972771
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "EBIT",
+    "year": 2027,
+    "financialLineItemShock": -2903.955509
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "FCFF",
+    "year": 2027,
+    "financialLineItemShock": -2323.164407
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "DCF",
+    "year": 2027,
+    "financialLineItemShock": -686.8176174
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "EBIT",
+    "year": 2028,
+    "financialLineItemShock": -3195.30885
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "FCFF",
+    "year": 2028,
+    "financialLineItemShock": -2556.24708
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "DCF",
+    "year": 2028,
+    "financialLineItemShock": -503.4443496
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "EBIT",
+    "year": 2029,
+    "financialLineItemShock": -3519.472091
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "FCFF",
+    "year": 2029,
+    "financialLineItemShock": -2815.577673
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "DCF",
+    "year": 2029,
+    "financialLineItemShock": -369.4054638
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "EBIT",
+    "year": 2030,
+    "financialLineItemShock": -3879.855355
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "FCFF",
+    "year": 2030,
+    "financialLineItemShock": -3103.884284
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "DCF",
+    "year": 2030,
+    "financialLineItemShock": -271.2866886
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "EBIT",
+    "year": 2031,
+    "financialLineItemShock": -3699.068383
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "FCFF",
+    "year": 2031,
+    "financialLineItemShock": -2959.254707
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "DCF",
+    "year": 2031,
+    "financialLineItemShock": -172.3028535
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "EBIT",
+    "year": 2032,
+    "financialLineItemShock": -4169.143008
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "FCFF",
+    "year": 2032,
+    "financialLineItemShock": -3335.314407
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "DCF",
+    "year": 2032,
+    "financialLineItemShock": -129.3701443
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "EBIT",
+    "year": 2033,
+    "financialLineItemShock": -4705.893317
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "FCFF",
+    "year": 2033,
+    "financialLineItemShock": -3764.714654
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "DCF",
+    "year": 2033,
+    "financialLineItemShock": -97.27842001
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "EBIT",
+    "year": 2034,
+    "financialLineItemShock": -5318.354831
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "FCFF",
+    "year": 2034,
+    "financialLineItemShock": -4254.683865
+  },
+  {
+    "climatePathway": "Low Demand",
+    "financialLineItem": "DCF",
+    "year": 2034,
+    "financialLineItemShock": -73.23840886
+  }
+]
