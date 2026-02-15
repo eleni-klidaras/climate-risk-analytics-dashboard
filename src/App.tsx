@@ -27,7 +27,6 @@ export default function App() {
 
   const chartData = useMemo(() => {
     if (!data) return;
-
     const filteredData = filterData(data, selectedLineItem, selectedTimeframe);
     return transformToChartData(filteredData);
   }, [data, selectedLineItem, selectedTimeframe]);
