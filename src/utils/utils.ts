@@ -1,8 +1,36 @@
-import { type FinancialRiskRecord } from "../types/types";
+import {
+  type FinancialRiskRecord,
+  type Timeframe,
+  TIMEFRAME_RANGES,
+} from "../types/types";
 
-export const filterByLineItem = (
+export const filterData = (
   data: FinancialRiskRecord[],
-  lineItem: string,
+  selectedMetric: string,
+  timeframe: Timeframe,
 ) => {
-  return data.filter((d) => d.financialLineItem === lineItem);
+  const { start, end } = TIMEFRAME_RANGES[timeframe];
+
+  return data.filter(
+    (d) =>
+      d.financialLineItem === selectedMetric &&
+      d.year >= start &&
+      d.year <= end,
+  );
+};
+
+export const transformToChartData = (filteredData: FinancialRiskRecord[]) => {
+  const grouped = filteredData.reduce(
+    (acc, curr) => {
+      if (!acc[curr.year]) {
+        acc[curr.year] = { year: curr.year };
+      }
+
+      acc[curr.year][curr.climatePathway] = curr.financialLineItemShock;
+      return acc;
+    },
+    {} as Record<number, Record<string, number>>,
+  );
+
+  return Object.values(grouped).sort((a, b) => a.year - b.year);
 };

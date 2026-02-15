@@ -3,10 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 
-if (
-  localStorage.getItem('theme') === 'dark' ||
-  (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)
-) {
+if (localStorage.getItem('theme') === 'dark') {
   document.documentElement.classList.add('dark');
 }
 

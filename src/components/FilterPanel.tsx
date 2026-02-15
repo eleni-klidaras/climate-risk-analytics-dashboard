@@ -1,15 +1,15 @@
-import { type FinancialLineItem } from "../types/types";
+import { type FinancialLineItem, type Timeframe } from "../types/types";
 
 type FilterPanelProps = {
   lineItem: FinancialLineItem;
   onLineItemChange: (value: FinancialLineItem) => void;
-  timeframe: string;
-  onTimeframeChange: (value: string) => void;
+  timeframe: Timeframe;
+  onTimeframeChange: (value: Timeframe) => void;
 };
 
 const LINE_ITEMS: FinancialLineItem[] = ["EBIT", "FCFF", "DCF"];
 
-const TIMEFRAMES = [
+const TIMEFRAMES: { label: string; value: Timeframe }[] = [
   { label: "Short-term (2025-2027)", value: "short" },
   { label: "Medium-term (2025-2030)", value: "medium" },
   { label: "Long-term (2025-2034)", value: "long" },
@@ -30,7 +30,9 @@ export default function FilterPanel({
         <select
           id="line-item"
           value={lineItem}
-          onChange={(e) => onLineItemChange(e.target.value as FinancialLineItem)}
+          onChange={(e) =>
+            onLineItemChange(e.target.value as FinancialLineItem)
+          }
           className="rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 py-2 text-sm"
         >
           {LINE_ITEMS.map((item) => (
@@ -48,7 +50,7 @@ export default function FilterPanel({
         <select
           id="timeframe"
           value={timeframe}
-          onChange={(e) => onTimeframeChange(e.target.value)}
+          onChange={(e) => onTimeframeChange(e.target.value as Timeframe)}
           className="rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 py-2 text-sm"
         >
           {TIMEFRAMES.map((tf) => (

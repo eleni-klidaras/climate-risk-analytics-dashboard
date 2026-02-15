@@ -2,6 +2,8 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import { fetchFinancialData } from "./services/fetchFinancialRiskData";
 import { type FinancialRiskRecord } from "./types/types";
+import Header from "./components/Header";
+import FilterPanel from "./components/FilterPanel";
 
 export default function App() {
   const [data, setData] = useState<FinancialRiskRecord[] | null>(null);
@@ -17,5 +19,14 @@ export default function App() {
     }
     fetchData();
   }, []);
-  return <>{console.log(data)}</>;
+  return (
+    <>
+      <div>
+        <Header />
+        <FilterPanel />
+        {/* <FilterPanel/>
+        <Graph/> */}
+      </div>
+    </>
+  );
 }
