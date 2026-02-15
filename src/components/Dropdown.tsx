@@ -21,7 +21,7 @@ export default function Dropdown({
   return (
     <div className="relative w-full" style={width ? { width } : undefined}>
       <div
-        className="cursor-pointer rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 shadow-md flex justify-between items-center hover:ring-1 hover:ring-blue-500 transition"
+        className="cursor-pointer border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 shadow-md flex justify-between items-center hover:ring-1 hover:ring-blue-500 transition"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span>{selected}</span>
@@ -40,18 +40,26 @@ export default function Dropdown({
         </svg>
       </div>
       {isOpen && (
-        <ul className="w-full  overflow-y-auto rounded-xl shadow-md px-2 py-2 mt-2 bg-white z-10 absolute">
+        <ul className="w-full  overflow-y-auto shadow-md px-2 py-2 mt-2 bg-white z-10 absolute">
           {items.map((item, idx) => (
             <li
               key={idx}
               value={item}
-              className={`rounded-xl cursor-pointer p-2 transition-transform duration-200 transform ${
+              className="cursor-pointer p-2 transition-all duration-200 text-black dark:text-white"
+              style={
                 hoveredIndex === idx
-                  ? "bg-black text-white scale-105"
-                  : "bg-transparent text-black dark:text-white"
-              }`}
+                  ? {
+                      borderBottomStyle: "solid",
+                      borderBottomWidth: 3,
+                      borderColor: "#00D08E",
+                    }
+                  : { borderBottomWidth: 3, borderColor: "transparent" }
+              }
               onMouseEnter={() => setHoveredIndex(idx)}
-              onMouseLeave={() => setHoveredIndex(null)}
+              onMouseLeave={() => {
+                // setIsOpen(false);
+                setHoveredIndex(null);
+              }}
               onClick={() => {
                 onSelect(item);
                 setIsOpen(false);
