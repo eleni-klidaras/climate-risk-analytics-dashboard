@@ -16,6 +16,14 @@ import ZoomInIcon from "@mui/icons-material/ZoomIn";
 import ZoomOutMapIcon from "@mui/icons-material/ZoomOut";
 import { type Theme } from "@mui/material/styles";
 import { COLORS } from "../constants/constants";
+import ChartTooltip from "./ChartTooltip";
+import ChartLegend from "./ChartLegend";
+
+export type PathwayConfig = {
+  key: string;
+  color: string;
+  severity: number;
+};
 
 type GraphProps = {
   chartData: Record<string, number>[];
@@ -75,71 +83,21 @@ export default function Graph({ chartData }: GraphProps) {
             height={80}
           />
           <Tooltip
-            content={({ active, payload, label }) => {
-              if (!active || !payload) return null;
-              const ordered = data
-                .filter((p) => payload.some((entry) => entry.dataKey === p.key))
-                .map((p) => ({
-                  ...p,
-                  value: payload.find((entry) => entry.dataKey === p.key)
-                    ?.value,
-                }));
-              return (
-                <div
-                  style={{
-                    backgroundColor: "white",
-                    border: "1px solid #ccc",
-                    borderRadius: 8,
-                    padding: "8px 12px",
-                  }}
-                >
-                  <p style={{ margin: 0, fontWeight: 600 }}>{label}</p>
-                  {ordered.map((item) => (
-                    <p
-                      key={item.key}
-                      style={{
-                        margin: "4px 0",
-                        color: item.color,
-                        fontSize: 13,
-                      }}
-                    >
-                      {item.key}: {Number(item.value).toFixed(2)}
-                    </p>
-                  ))}
-                </div>
-              );
-            }}
+            content={({ active, payload, label }) => (
+              <ChartTooltip
+                active={active}
+                payload={payload}
+                label={String(label)}
+                pathways={data}
+              />
+            )}
           />
           <Legend
             layout="vertical"
             align="right"
             verticalAlign="top"
             wrapperStyle={{ marginTop: 10, marginRight: -20 }}
-            content={() => (
-              <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
-                {data.map((pathway) => (
-                  <li
-                    key={pathway.key}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      marginBottom: 4,
-                    }}
-                  >
-                    <span
-                      style={{
-                        width: 14,
-                        height: 3,
-                        backgroundColor: pathway.color,
-                        display: "inline-block",
-                        marginRight: 8,
-                      }}
-                    />
-                    <span style={{ fontSize: 14 }}>{pathway.key}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
+            content={() => <ChartLegend pathways={data} />}
           />
           {data.map((pathway) => (
             <Line
@@ -151,13 +109,7 @@ export default function Graph({ chartData }: GraphProps) {
               strokeWidth={1}
             />
           ))}
-          <Brush
-            dataKey="year"
-            height={20}
-            stroke={COLORS.VIBRANT_GREEN}
-            startIndex={1}
-            travellerWidth={10}
-          />
+          <Brush dataKey="year" height={20} stroke={COLORS.VIBRANT_GREEN} />
         </LineChart>
       </ResponsiveContainer>
     </div>
