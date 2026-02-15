@@ -11,6 +11,9 @@
     "transform-data": "npx ts-node scripts/transformData.ts"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.8",
     "@tailwindcss/vite": "^4.1.18",
     "papaparse": "^5.5.3",
     "react": "^19.2.0",
