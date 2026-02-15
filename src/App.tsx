@@ -10,16 +10,19 @@ import Header from "./components/Header";
 import FilterPanel from "./components/FilterPanel";
 import Graph from "./components/Graph";
 import { filterData, transformToChartData } from "./utils/utils";
-import { InsightPanel } from "./components/InsightPanel";
+import { Alert } from "@mui/material";
 
 export default function App() {
   const [data, setData] = useState<FinancialRiskRecord[] | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const [selectedLineItem, setSelectedLineItem] =
     useState<FinancialLineItem>("EBIT");
   const [selectedTimeframe, setSelectedTimeframe] = useState<Timeframe>("long");
 
   useEffect(() => {
-    fetchFinancialData().then(setData).catch();
+    fetchFinancialData()
+      .then(setData)
+      .catch((err) => setError(err.message || "Failed to load financial data"));
   }, []);
 
   const chartData = useMemo(() => {
@@ -42,9 +45,13 @@ export default function App() {
             setSelectedTimeframe,
           }}
         />
+        {error && (
+          <Alert severity="error" className="mx-6 mt-4">
+            {error}
+          </Alert>
+        )}
         {chartData && <Graph {...{ chartData }} />}
       </div>
-      <link href="https://fonts.cdnfonts.com/css/lufga" rel="stylesheet"></link>
     </>
   );
 }
