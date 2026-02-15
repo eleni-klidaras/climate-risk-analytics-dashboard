@@ -42,8 +42,9 @@ export default function App() {
             setSelectedTimeframe,
           }}
         />
-        {chartData && <Graph chartData={chartData} yDomain={yDomain} />}
+        {chartData && <Graph {...{ chartData }} />}
       </div>
+      <link href="https://fonts.cdnfonts.com/css/lufga" rel="stylesheet"></link>
     </>
   );
 }
