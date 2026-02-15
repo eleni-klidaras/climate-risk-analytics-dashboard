@@ -1,20 +1,14 @@
 import { useState } from "react";
+import { COLORS } from "../constants/constants";
 
-type FinancialLineItem = string;
-
-interface CustomDropdownProps {
-  items: FinancialLineItem[];
-  selected: FinancialLineItem;
-  onSelect: (item: FinancialLineItem) => void;
+type Props = {
+  items: string[];
+  selected: string;
+  onSelect: (item: string) => void;
   width?: string;
-}
+};
 
-export default function Dropdown({
-  items,
-  selected,
-  onSelect,
-  width,
-}: CustomDropdownProps) {
+export default function Dropdown({ items, selected, onSelect, width }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -51,13 +45,12 @@ export default function Dropdown({
                   ? {
                       borderBottomStyle: "solid",
                       borderBottomWidth: 3,
-                      borderColor: "#00D08E",
+                      borderColor: COLORS.VIBRANT_GREEN,
                     }
                   : { borderBottomWidth: 3, borderColor: "transparent" }
               }
               onMouseEnter={() => setHoveredIndex(idx)}
               onMouseLeave={() => {
-                // setIsOpen(false);
                 setHoveredIndex(null);
               }}
               onClick={() => {

@@ -1,11 +1,3 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
-@import url("https://fonts.googleapis.com/css2?family=Lufga&display=swap");
-
-/* body {
-  @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white;
-} */
-:root {
-  --font-sans: "Lufga", "sans-serif";
-}

@@ -1,8 +1,5 @@
-import {
-  type FinancialRiskRecord,
-  type Timeframe,
-  TIMEFRAME_RANGES,
-} from "../types/types";
+import { type FinancialRiskRecord, type Timeframe } from "../types/types";
+import { TIMEFRAME_RANGES } from "../constants/constants";
 
 export const filterData = (
   data: FinancialRiskRecord[],

@@ -1,4 +1,5 @@
 import { type FinancialLineItem, type Timeframe } from "../types/types";
+import { LINE_ITEMS, TIMEFRAMES } from "../constants/constants";
 import Dropdown from "./Dropdown";
 
 type FilterPanelProps = {
@@ -7,14 +8,6 @@ type FilterPanelProps = {
   selectedTimeframe: Timeframe;
   setSelectedTimeframe: (value: Timeframe) => void;
 };
-
-const LINE_ITEMS: FinancialLineItem[] = ["EBIT", "FCFF", "DCF"];
-
-const TIMEFRAMES: { label: string; value: Timeframe }[] = [
-  { label: "Short-term (2025-2027)", value: "short" },
-  { label: "Medium-term (2025-2030)", value: "medium" },
-  { label: "Long-term (2025-2034)", value: "long" },
-];
 
 export default function FilterPanel({
   selectedLineItem,
@@ -30,26 +23,11 @@ export default function FilterPanel({
         </label>
 
         <Dropdown
-          items={LINE_ITEMS} // the array of options
-          selected={selectedLineItem} // currently selected item
-          onSelect={(item) => setSelectedLineItem(item)} // update state on select
+          items={LINE_ITEMS}
+          selected={selectedLineItem}
+          onSelect={(item) => setSelectedLineItem(item as FinancialLineItem)}
           width="200px"
         />
-
-        {/* <select
-          id="line-item"
-          value={selectedLineItem}
-          onChange={(e) =>
-            setSelectedLineItem(e.target.value as FinancialLineItem)
-          }
-          className="rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 py-2 text-sm"
-        >
-          {LINE_ITEMS.map((item) => (
-            <option key={item} value={item}>
-              {item}
-            </option>
-          ))}
-        </select> */}
       </div>
 
       <div className="flex flex-col gap-1">
@@ -67,18 +45,6 @@ export default function FilterPanel({
           }}
           width="300px"
         />
-        {/* <select
-          id="timeframe"
-          value={selectedTimeframe}
-          onChange={(e) => setSelectedTimeframe(e.target.value as Timeframe)}
-          className="rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 py-2 text-sm"
-        >
-          {TIMEFRAMES.map((tf) => (
-            <option key={tf.value} value={tf.value}>
-              {tf.label}
-            </option>
-          ))}
-        </select> */}
       </div>
     </div>
   );

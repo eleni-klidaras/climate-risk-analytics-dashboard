@@ -29,29 +29,26 @@ export default function App() {
     if (!data) return;
 
     const filteredData = filterData(data, selectedLineItem, selectedTimeframe);
-
     return transformToChartData(filteredData);
   }, [data, selectedLineItem, selectedTimeframe]);
 
   return (
-    <>
-      <div>
-        <Header />
-        <FilterPanel
-          {...{
-            selectedLineItem,
-            setSelectedLineItem,
-            selectedTimeframe,
-            setSelectedTimeframe,
-          }}
-        />
-        {error && (
-          <Alert severity="error" className="mx-6 mt-4">
-            {error}
-          </Alert>
-        )}
-        {chartData && <Graph {...{ chartData }} />}
-      </div>
-    </>
+    <div>
+      <Header />
+      <FilterPanel
+        {...{
+          selectedLineItem,
+          setSelectedLineItem,
+          selectedTimeframe,
+          setSelectedTimeframe,
+        }}
+      />
+      {error && (
+        <Alert severity="error" className="mx-6 mt-4">
+          {error}
+        </Alert>
+      )}
+      {chartData && <Graph {...{ chartData }} />}
+    </div>
   );
 }

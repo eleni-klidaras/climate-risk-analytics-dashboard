@@ -15,6 +15,7 @@ import { IconButton, Tooltip as IconTooltip } from "@mui/material";
 import ZoomInIcon from "@mui/icons-material/ZoomIn";
 import ZoomOutMapIcon from "@mui/icons-material/ZoomOut";
 import { type Theme } from "@mui/material/styles";
+import { COLORS } from "../constants/constants";
 
 type GraphProps = {
   chartData: Record<string, number>[];
@@ -24,8 +25,8 @@ const getPathwaysWithColors = (theme: Theme) => [
   { key: "Current Policies", color: theme.palette.error.light, severity: 5 },
   { key: "NDCs", color: theme.palette.warning.main, severity: 4 },
   { key: "Below 2C", color: theme.palette.primary.light, severity: 3 },
-  { key: "Net Zero 2050", color: "#1cd6ee", severity: 2 },
-  { key: "Low Demand", color: "#00D08E", severity: 1 },
+  { key: "Net Zero 2050", color: COLORS.CYAN, severity: 2 },
+  { key: "Low Demand", color: COLORS.VIBRANT_GREEN, severity: 1 },
 ];
 
 export default function Graph({ chartData }: GraphProps) {
@@ -153,7 +154,7 @@ export default function Graph({ chartData }: GraphProps) {
           <Brush
             dataKey="year"
             height={20}
-            stroke={"#00D08E"}
+            stroke={COLORS.VIBRANT_GREEN}
             startIndex={1}
             travellerWidth={10}
           />
