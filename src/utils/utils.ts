@@ -6,19 +6,20 @@ import {
 
 export const filterData = (
   data: FinancialRiskRecord[],
-  selectedMetric: string,
+  selectedLineItem: string,
   timeframe: Timeframe,
 ) => {
   const { start, end } = TIMEFRAME_RANGES[timeframe];
 
   return data.filter(
     (d) =>
-      d.financialLineItem === selectedMetric &&
+      d.financialLineItem === selectedLineItem &&
       d.year >= start &&
       d.year <= end,
   );
 };
 
+// Transform data from one pathway per year to one object per year
 export const transformToChartData = (filteredData: FinancialRiskRecord[]) => {
   const grouped = filteredData.reduce(
     (acc, curr) => {
