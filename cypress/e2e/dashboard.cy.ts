@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe("Climate Financial Risk Analytics", () => {
   beforeEach(() => {
     cy.visit("/");
