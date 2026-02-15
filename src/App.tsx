@@ -34,18 +34,20 @@ export default function App() {
   return (
     <>
       <Header />
-      <FilterPanel
-        selectedLineItem={selectedLineItem}
-        setSelectedLineItem={setSelectedLineItem}
-        selectedTimeframe={selectedTimeframe}
-        setSelectedTimeframe={setSelectedTimeframe}
-      />
-      {error && (
-        <Alert severity="error" className="mx-6 mt-4">
-          {error}
-        </Alert>
-      )}
-      {chartData && <Graph chartData={chartData} />}
+      <main id="main-content">
+        <FilterPanel
+          selectedLineItem={selectedLineItem}
+          setSelectedLineItem={setSelectedLineItem}
+          selectedTimeframe={selectedTimeframe}
+          setSelectedTimeframe={setSelectedTimeframe}
+        />
+        {error && (
+          <Alert severity="error" className="mx-6 mt-4">
+            {error}
+          </Alert>
+        )}
+        {chartData && <Graph chartData={chartData} />}
+      </main>
     </>
   );
 }

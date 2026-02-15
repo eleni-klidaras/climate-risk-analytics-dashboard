@@ -18,11 +18,12 @@ export default function FilterPanel({
   return (
     <div className="flex gap-4 px-6 py-4">
       <div className="flex flex-col gap-1">
-        <label className="text-sm font-medium">
+        <label htmlFor="financial-metric" className="text-sm font-medium">
           Financial Metric
         </label>
 
         <Dropdown
+          id="financial-metric"
           items={LINE_ITEMS}
           selected={selectedLineItem}
           onSelect={(item) => setSelectedLineItem(item)}
@@ -31,10 +32,11 @@ export default function FilterPanel({
       </div>
 
       <div className="flex flex-col gap-1">
-        <label className="text-sm font-medium">
+        <label htmlFor="timeframe" className="text-sm font-medium">
           Timeframe
         </label>
         <Dropdown
+          id="timeframe"
           items={TIMEFRAMES.map((tf) => tf.label)}
           selected={
             TIMEFRAMES.find((tf) => tf.value === selectedTimeframe)?.label ?? ""

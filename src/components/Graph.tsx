@@ -47,6 +47,8 @@ export default function Graph({ chartData }: GraphProps) {
 
   return (
     <div
+      role="img"
+      aria-label="Line chart showing financial impact across climate pathways"
       style={{
         width: "100%",
         height: "70vh",
@@ -55,7 +57,10 @@ export default function Graph({ chartData }: GraphProps) {
     >
       <div className="flex justify-end">
         <IconTooltip title={zoomed ? "Zoom Out" : "Zoom In"}>
-          <IconButton onClick={() => setZoomed((prev) => !prev)}>
+          <IconButton
+            aria-label={zoomed ? "Reset zoom" : "Zoom in"}
+            onClick={() => setZoomed((prev) => !prev)}
+          >
             {zoomed ? <ZoomOutMapIcon /> : <ZoomInIcon />}
           </IconButton>
         </IconTooltip>

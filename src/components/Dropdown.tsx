@@ -7,9 +7,10 @@ type Props<T extends string> = {
   selected: T;
   onSelect: (item: T) => void;
   width?: string;
+  id?: string;
 };
 
-export default function Dropdown<T extends string>({ items, selected, onSelect, width }: Props<T>) {
+export default function Dropdown<T extends string>({ items, selected, onSelect, width, id }: Props<T>) {
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -17,11 +18,16 @@ export default function Dropdown<T extends string>({ items, selected, onSelect, 
     <ClickAwayListener onClickAway={() => setIsOpen(false)}>
       <div className="relative w-full" style={width ? { width } : undefined}>
         <div
+          id={id}
+          role="button"
+          aria-expanded={isOpen}
+          aria-haspopup="listbox"
           className="cursor-pointer border border-gray-300 bg-white px-4 py-2 shadow-md flex justify-between items-center hover:ring-1 hover:ring-blue-500 transition"
           onClick={() => setIsOpen(!isOpen)}
         >
           <span>{selected}</span>
           <svg
+            aria-hidden="true"
             className={`w-4 h-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
             fill="none"
             stroke="currentColor"
@@ -36,11 +42,12 @@ export default function Dropdown<T extends string>({ items, selected, onSelect, 
           </svg>
         </div>
         {isOpen && (
-          <ul className="w-full overflow-y-auto shadow-md px-2 py-2 mt-2 bg-white z-10 absolute">
+          <ul role="listbox" className="w-full overflow-y-auto shadow-md px-2 py-2 mt-2 bg-white z-10 absolute">
             {items.map((item, idx) => (
               <li
                 key={idx}
-                value={item}
+                role="option"
+                aria-selected={item === selected}
                 className="cursor-pointer p-2 transition-all duration-200 text-black"
                 style={
                   hoveredIndex === idx
