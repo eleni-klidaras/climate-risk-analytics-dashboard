@@ -1,16 +1,16 @@
-import "./App.css";
 import { useEffect, useState, useMemo } from "react";
+import { Alert } from "@mui/material";
 import {
   type FinancialRiskRecord,
   type FinancialLineItem,
   type Timeframe,
 } from "./types/types";
 import { fetchFinancialData } from "./services/fetchFinancialRiskData";
+import { filterData, transformToChartData } from "./utils/utils";
 import Header from "./components/Header";
 import FilterPanel from "./components/FilterPanel";
 import Graph from "./components/Graph";
-import { filterData, transformToChartData } from "./utils/utils";
-import { Alert } from "@mui/material";
+import "./App.css";
 
 export default function App() {
   const [data, setData] = useState<FinancialRiskRecord[] | null>(null);
@@ -26,7 +26,7 @@ export default function App() {
   }, []);
 
   const chartData = useMemo(() => {
-    if (!data) return;
+    if (!data) return [];
     const filteredData = filterData(data, selectedLineItem, selectedTimeframe);
     return transformToChartData(filteredData);
   }, [data, selectedLineItem, selectedTimeframe]);
@@ -35,19 +35,17 @@ export default function App() {
     <div>
       <Header />
       <FilterPanel
-        {...{
-          selectedLineItem,
-          setSelectedLineItem,
-          selectedTimeframe,
-          setSelectedTimeframe,
-        }}
+        selectedLineItem={selectedLineItem}
+        setSelectedLineItem={setSelectedLineItem}
+        selectedTimeframe={selectedTimeframe}
+        setSelectedTimeframe={setSelectedTimeframe}
       />
       {error && (
         <Alert severity="error" className="mx-6 mt-4">
           {error}
         </Alert>
       )}
-      {chartData && <Graph {...{ chartData }} />}
+      {chartData && <Graph chartData={chartData} />}
     </div>
   );
 }

@@ -41,7 +41,7 @@ export default function ChartTooltip({
             fontSize: 13,
           }}
         >
-          {item.key}: {Number(item.value).toFixed(2)}
+          {item.key}: {Number(item.value ?? 0).toFixed(2)}
         </p>
       ))}
     </div>

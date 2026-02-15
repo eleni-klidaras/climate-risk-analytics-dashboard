@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { COLORS } from "../constants/constants";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
+import { COLORS } from "../constants/constants";
 
 type Props = {
   items: string[];
@@ -36,7 +36,7 @@ export default function Dropdown({ items, selected, onSelect, width }: Props) {
           </svg>
         </div>
         {isOpen && (
-          <ul className="w-full  overflow-y-auto shadow-md px-2 py-2 mt-2 bg-white z-10 absolute">
+          <ul className="w-full overflow-y-auto shadow-md px-2 py-2 mt-2 bg-white z-10 absolute">
             {items.map((item, idx) => (
               <li
                 key={idx}

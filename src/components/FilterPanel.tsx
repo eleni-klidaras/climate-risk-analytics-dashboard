@@ -18,7 +18,7 @@ export default function FilterPanel({
   return (
     <div className="flex gap-4 px-6 py-4">
       <div className="flex flex-col gap-1">
-        <label htmlFor="line-item" className="text-sm font-medium">
+        <label className="text-sm font-medium">
           Financial Metric
         </label>
 
@@ -31,7 +31,7 @@ export default function FilterPanel({
       </div>
 
       <div className="flex flex-col gap-1">
-        <label htmlFor="timeframe" className="text-sm font-medium">
+        <label className="text-sm font-medium">
           Timeframe
         </label>
         <Dropdown

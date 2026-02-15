@@ -1,3 +1,4 @@
+import { useMemo, useState } from "react";
 import {
   LineChart,
   Line,
@@ -9,12 +10,10 @@ import {
   ResponsiveContainer,
   Brush,
 } from "recharts";
-import { useTheme } from "@mui/material/styles";
-import { useMemo, useState } from "react";
+import { useTheme, type Theme } from "@mui/material/styles";
 import { IconButton, Tooltip as IconTooltip } from "@mui/material";
 import ZoomInIcon from "@mui/icons-material/ZoomIn";
 import ZoomOutMapIcon from "@mui/icons-material/ZoomOut";
-import { type Theme } from "@mui/material/styles";
 import { COLORS } from "../constants/constants";
 import ChartTooltip from "./ChartTooltip";
 import ChartLegend from "./ChartLegend";
@@ -43,7 +42,8 @@ export default function Graph({ chartData }: GraphProps) {
 
   const data = useMemo(() => getPathwaysWithColors(theme), [theme]);
 
-  if (!chartData.length) return <p className="px-6 py-4">No data available.</p>;
+  if (!chartData?.length)
+    return <p className="px-6 py-4">No data available.</p>;
 
   return (
     <div
