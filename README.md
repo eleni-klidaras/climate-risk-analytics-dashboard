@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# Climate Financial Risk Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React dashboard that visualises the financial impact of climate risk across multiple pathways, timeframes, and financial metrics.
 
-Currently, two official plugins are available:
+Built with **React**, **TypeScript**, **Recharts**, **Tailwind CSS**, and **Material UI**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
 
-## React Compiler
+- Node.js (v18+)
+- npm
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting Started
 
-## Expanding the ESLint configuration
+1. Install dependencies
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Transform the CSV mock data into JSON (required before running the app):
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm run transform-data
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+This will read the CSV file located at `src/data/mock_data.csv` and generate a JSON file at `src/data/transformed_mock_data.json`. The dashboard uses this JSON as its data source.
+
+**Note:** We are not using a backend service for this project because:
+
+- The dataset is static and small (mock data).
+- The focus is on demonstrating React, data transformation, and visualization.
+- Avoiding a backend simplifies setup for testing and reviewing the dashboard.
+- Insights and charts are computed directly in the frontend for speed and interactivity.
+
+## Start the development server
+
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`.
+
+**Filters and Interactivity**
+
+- Financial Line Item Dropdown: Select which metric to display (EBIT, FCFF, DCF).
+- Timeframe Dropdown: Filter data by years (e.g., 2025–2030, 2030–2034).
+- TimeScale Slider: Adjust the time scale to focus on specific periods.
+- Zoom Controls: Zoom in or out on the graph for a clearer view of the data.
+
+## Running Tests (Optional)
+
+End-to-end tests are written with Cypress. To run them, first start the dev server, then run Cypress in a separate terminal:
+
+```bash
+# Terminal 1
+npm run dev
+
+# Terminal 2
+npm run cypress:open   # interactive mode
+npm run cypress:run    # headless mode
 ```
