@@ -17,7 +17,7 @@ export default function Dropdown({ items, selected, onSelect, width }: Props) {
     <ClickAwayListener onClickAway={() => setIsOpen(false)}>
       <div className="relative w-full" style={width ? { width } : undefined}>
         <div
-          className="cursor-pointer border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 shadow-md flex justify-between items-center hover:ring-1 hover:ring-blue-500 transition"
+          className="cursor-pointer border border-gray-300 bg-white px-4 py-2 shadow-md flex justify-between items-center hover:ring-1 hover:ring-blue-500 transition"
           onClick={() => setIsOpen(!isOpen)}
         >
           <span>{selected}</span>
@@ -41,7 +41,7 @@ export default function Dropdown({ items, selected, onSelect, width }: Props) {
               <li
                 key={idx}
                 value={item}
-                className="cursor-pointer p-2 transition-all duration-200 text-black dark:text-white"
+                className="cursor-pointer p-2 transition-all duration-200 text-black"
                 style={
                   hoveredIndex === idx
                     ? {
