@@ -32,7 +32,7 @@ export default function App() {
   }, [data, selectedLineItem, selectedTimeframe]);
 
   return (
-    <div>
+    <>
       <Header />
       <FilterPanel
         selectedLineItem={selectedLineItem}
@@ -46,6 +46,6 @@ export default function App() {
         </Alert>
       )}
       {chartData && <Graph chartData={chartData} />}
-    </div>
+    </>
   );
 }
