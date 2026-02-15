@@ -1,4 +1,5 @@
 import { type FinancialLineItem, type Timeframe } from "../types/types";
+import Dropdown from "./Dropdown";
 
 type FilterPanelProps = {
   selectedLineItem: FinancialLineItem;
@@ -27,7 +28,15 @@ export default function FilterPanel({
         <label htmlFor="line-item" className="text-sm font-medium">
           Financial Metric
         </label>
-        <select
+
+        <Dropdown
+          items={LINE_ITEMS} // the array of options
+          selected={selectedLineItem} // currently selected item
+          onSelect={(item) => setSelectedLineItem(item)} // update state on select
+          width="200px"
+        />
+
+        {/* <select
           id="line-item"
           value={selectedLineItem}
           onChange={(e) =>
@@ -40,19 +49,28 @@ export default function FilterPanel({
               {item}
             </option>
           ))}
-        </select>
+        </select> */}
       </div>
 
       <div className="flex flex-col gap-1">
         <label htmlFor="timeframe" className="text-sm font-medium">
           Timeframe
         </label>
-        <select
+        <Dropdown
+          items={TIMEFRAMES.map((tf) => tf.label)}
+          selected={
+            TIMEFRAMES.find((tf) => tf.value === selectedTimeframe)?.label ?? ""
+          }
+          onSelect={(label) => {
+            const match = TIMEFRAMES.find((tf) => tf.label === label);
+            if (match) setSelectedTimeframe(match.value);
+          }}
+          width="300px"
+        />
+        {/* <select
           id="timeframe"
           value={selectedTimeframe}
-          onChange={(e) =>
-            setSelectedTimeframe(e.target.value as Timeframe)
-          }
+          onChange={(e) => setSelectedTimeframe(e.target.value as Timeframe)}
           className="rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 py-2 text-sm"
         >
           {TIMEFRAMES.map((tf) => (
@@ -60,7 +78,7 @@ export default function FilterPanel({
               {tf.label}
             </option>
           ))}
-        </select>
+        </select> */}
       </div>
     </div>
   );
