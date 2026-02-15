@@ -1,48 +1,35 @@
 import "./App.css";
 import { useEffect, useState, useMemo } from "react";
-import { fetchFinancialData } from "./services/fetchFinancialRiskData";
 import {
   type FinancialRiskRecord,
   type FinancialLineItem,
   type Timeframe,
 } from "./types/types";
+import { fetchFinancialData } from "./services/fetchFinancialRiskData";
 import Header from "./components/Header";
 import FilterPanel from "./components/FilterPanel";
 import Graph from "./components/Graph";
 import { filterData, transformToChartData } from "./utils/utils";
+import { InsightPanel } from "./components/InsightPanel";
 
 export default function App() {
   const [data, setData] = useState<FinancialRiskRecord[] | null>(null);
   const [selectedLineItem, setSelectedLineItem] =
     useState<FinancialLineItem>("EBIT");
-  const [selectedTimeframe, setSelectedTimeframe] =
-    useState<Timeframe>("short");
+  const [selectedTimeframe, setSelectedTimeframe] = useState<Timeframe>("long");
 
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const fetchedData: FinancialRiskRecord[] = await fetchFinancialData();
-        if (fetchedData.length) setData(fetchedData);
-      } catch (err) {
-        console.error("Failed to fetch data:", err);
-      }
-    }
-    fetchData();
+    fetchFinancialData().then(setData).catch();
   }, []);
-
-  const yDomain = useMemo<[number, number] | undefined>(() => {
-    if (!data) return;
-    const shocks = data.map((d) => d.financialLineItemShock);
-    return [Math.min(...shocks), Math.max(...shocks)];
-  }, [data]);
 
   const chartData = useMemo(() => {
     if (!data) return;
+
     const filteredData = filterData(data, selectedLineItem, selectedTimeframe);
+
     return transformToChartData(filteredData);
   }, [data, selectedLineItem, selectedTimeframe]);
 
-  console.log(chartData);
   return (
     <>
       <div>
