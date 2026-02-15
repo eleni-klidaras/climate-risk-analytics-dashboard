@@ -3,5 +3,5 @@ import { type FinancialRiskRecord } from "../types/types";
 
 // Simulate an API call
 export const fetchFinancialData = async (): Promise<FinancialRiskRecord[]> => {
-  return data;
+  return data as FinancialRiskRecord[];
 };

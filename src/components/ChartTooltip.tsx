@@ -1,8 +1,9 @@
+import { type TooltipPayloadEntry } from "recharts";
 import { type PathwayConfig } from "./Graph";
 
 type ChartTooltipProps = {
   active?: boolean;
-  payload?: readonly { dataKey?: string | number; value?: number }[];
+  payload?: ReadonlyArray<TooltipPayloadEntry<number, string>>;
   label?: string;
   pathways: PathwayConfig[];
 };

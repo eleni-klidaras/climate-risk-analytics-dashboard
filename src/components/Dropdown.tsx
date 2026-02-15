@@ -2,14 +2,14 @@ import { useState } from "react";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import { COLORS } from "../constants/constants";
 
-type Props = {
-  items: string[];
-  selected: string;
-  onSelect: (item: string) => void;
+type Props<T extends string> = {
+  items: T[];
+  selected: T;
+  onSelect: (item: T) => void;
   width?: string;
 };
 
-export default function Dropdown({ items, selected, onSelect, width }: Props) {
+export default function Dropdown<T extends string>({ items, selected, onSelect, width }: Props<T>) {
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 

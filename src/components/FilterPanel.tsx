@@ -25,7 +25,7 @@ export default function FilterPanel({
         <Dropdown
           items={LINE_ITEMS}
           selected={selectedLineItem}
-          onSelect={(item) => setSelectedLineItem(item as FinancialLineItem)}
+          onSelect={(item) => setSelectedLineItem(item)}
           width="200px"
         />
       </div>

@@ -3,6 +3,7 @@ import Papa from "papaparse";
 import {
   type RawFinancialRiskRow,
   type FinancialRiskRecord,
+  type FinancialLineItem,
 } from "../src/types/types";
 
 const INPUT_FILE = "./src/data/mock_data.csv";
@@ -24,7 +25,7 @@ function transformData(): void {
     const transformedData: FinancialRiskRecord[] = parsed.data
       .map((row: RawFinancialRiskRow) => ({
         climatePathway: row.climate_pathway,
-        financialLineItem: row.financial_line_item,
+        financialLineItem: row.financial_line_item as FinancialLineItem,
         year: Number(row.year),
         financialLineItemShock: Number(row.financial_line_item_shock),
       }))
