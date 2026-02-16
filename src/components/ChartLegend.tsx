@@ -6,26 +6,14 @@ type ChartLegendProps = {
 
 export default function ChartLegend({ pathways }: ChartLegendProps) {
   return (
-    <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
+    <ul className="list-none m-0 p-0">
       {pathways.map((pathway) => (
-        <li
-          key={pathway.key}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            marginBottom: 4,
-          }}
-        >
+        <li key={pathway.key} className="flex items-center mb-1">
           <span
-            style={{
-              width: 14,
-              height: 3,
-              backgroundColor: pathway.color,
-              display: "inline-block",
-              marginRight: 8,
-            }}
+            className="w-3.5 h-[3px] inline-block mr-2"
+            style={{ backgroundColor: pathway.color }}
           />
-          <span style={{ fontSize: 14 }}>{pathway.key}</span>
+          <span className="text-sm">{pathway.key}</span>
         </li>
       ))}
     </ul>

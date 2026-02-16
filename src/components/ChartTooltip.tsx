@@ -24,23 +24,13 @@ export default function ChartTooltip({
     }));
 
   return (
-    <div
-      style={{
-        backgroundColor: "white",
-        border: "1px solid #ccc",
-        borderRadius: 8,
-        padding: "8px 12px",
-      }}
-    >
-      <p style={{ margin: 0, fontWeight: 600 }}>{label}</p>
+    <div className="bg-white border border-gray-300 rounded-lg px-3 py-2">
+      <p className="m-0 font-semibold">{label}</p>
       {ordered.map((item) => (
         <p
           key={item.key}
-          style={{
-            margin: "4px 0",
-            color: item.color,
-            fontSize: 13,
-          }}
+          className="my-1 text-[13px]"
+          style={{ color: item.color }}
         >
           {item.key}: {Number(item.value ?? 0).toFixed(2)}
         </p>

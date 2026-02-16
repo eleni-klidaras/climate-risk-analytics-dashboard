@@ -42,25 +42,18 @@ export default function Graph({ chartData }: GraphProps) {
 
   const data = useMemo(() => getPathwaysWithColors(theme), [theme]);
 
-  if (!chartData?.length)
-    return <p className="px-6 py-4">No data available.</p>;
-
   return (
     <div
       role="img"
       aria-label="Line chart showing financial impact across climate pathways"
-      style={{
-        width: "100%",
-        height: "70vh",
-        padding: "20px",
-      }}
+      className="w-full h-[50vh] sm:h-[70vh] p-3 sm:p-5"
     >
       <div className="flex justify-end">
-        <IconTooltip title={zoomed ? "Zoom Out" : "Zoom In"}>
-          <IconButton
-            aria-label={zoomed ? "Reset zoom" : "Zoom in"}
-            onClick={() => setZoomed((prev) => !prev)}
-          >
+        <IconTooltip
+          title={zoomed ? "Zoom Out" : "Zoom In"}
+          aria-label={zoomed ? "Reset zoom" : "Zoom in"}
+        >
+          <IconButton onClick={() => setZoomed((prev) => !prev)}>
             {zoomed ? <ZoomOutMapIcon /> : <ZoomInIcon />}
           </IconButton>
         </IconTooltip>

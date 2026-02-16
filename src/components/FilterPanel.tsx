@@ -16,7 +16,7 @@ export default function FilterPanel({
   setSelectedTimeframe,
 }: FilterPanelProps) {
   return (
-    <div className="flex gap-4 px-6 py-4">
+    <div className="flex flex-wrap gap-4 px-6 py-4">
       <div className="flex flex-col gap-1">
         <label htmlFor="financial-metric" className="text-sm font-medium">
           Financial Metric

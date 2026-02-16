@@ -1,6 +1,5 @@
 import { useState } from "react";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
-import { COLORS } from "../constants/constants";
 
 type Props<T extends string> = {
   items: T[];
@@ -12,11 +11,10 @@ type Props<T extends string> = {
 
 export default function Dropdown<T extends string>({ items, selected, onSelect, width, id }: Props<T>) {
   const [isOpen, setIsOpen] = useState(false);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <ClickAwayListener onClickAway={() => setIsOpen(false)}>
-      <div className="relative w-full" style={width ? { width } : undefined}>
+      <div className="relative w-full" style={width ? { minWidth: width } : undefined}>
         <div
           id={id}
           role="button"
@@ -48,20 +46,7 @@ export default function Dropdown<T extends string>({ items, selected, onSelect, 
                 key={idx}
                 role="option"
                 aria-selected={item === selected}
-                className="cursor-pointer p-2 transition-all duration-200 text-black"
-                style={
-                  hoveredIndex === idx
-                    ? {
-                        borderBottomStyle: "solid",
-                        borderBottomWidth: 3,
-                        borderColor: COLORS.VIBRANT_GREEN,
-                      }
-                    : { borderBottomWidth: 3, borderColor: "transparent" }
-                }
-                onMouseEnter={() => setHoveredIndex(idx)}
-                onMouseLeave={() => {
-                  setHoveredIndex(null);
-                }}
+                className="cursor-pointer p-2 transition-all duration-200 text-black border-b-3 border-transparent hover:border-[#00D08E]"
                 onClick={() => {
                   onSelect(item);
                   setIsOpen(false);
