@@ -1,4 +1,4 @@
-import { type PathwayConfig } from "./Graph";
+import { type PathwayConfig } from "../types/types";
 
 type ChartLegendProps = {
   pathways: PathwayConfig[];

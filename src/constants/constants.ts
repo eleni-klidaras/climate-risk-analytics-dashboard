@@ -3,7 +3,18 @@ import { type FinancialLineItem, type Timeframe } from "../types/types";
 export const COLORS = {
   VIBRANT_GREEN: "#00D08E",
   CYAN: "#1cd6ee",
+  FALLBACK: "#888888",
 } as const;
+
+export const PATHWAY_SEVERITY: Record<string, number> = {
+  "Fragmented World": 7,
+  "Current Policies": 6,
+  "Delayed Transition": 5,
+  "NDCs": 4,
+  "Below 2C": 3,
+  "Net Zero 2050": 2,
+  "Low Demand": 1,
+};
 
 export const LINE_ITEMS: FinancialLineItem[] = ["EBIT", "FCFF", "DCF"];
 

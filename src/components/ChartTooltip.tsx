@@ -1,5 +1,5 @@
 import { type TooltipPayloadEntry } from "recharts";
-import { type PathwayConfig } from "./Graph";
+import { type PathwayConfig } from "../types/types";
 
 type ChartTooltipProps = {
   active?: boolean;

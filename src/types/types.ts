@@ -15,3 +15,9 @@ export type FinancialRiskRecord = {
 export type FinancialLineItem = "EBIT" | "FCFF" | "DCF";
 
 export type Timeframe = "short" | "medium" | "long";
+
+export type PathwayConfig = {
+  key: string;
+  color: string;
+  severity: number;
+};

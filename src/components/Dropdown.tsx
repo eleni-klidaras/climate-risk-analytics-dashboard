@@ -41,9 +41,9 @@ export default function Dropdown<T extends string>({ items, selected, onSelect, 
         </div>
         {isOpen && (
           <ul role="listbox" className="w-full overflow-y-auto shadow-md px-2 py-2 mt-2 bg-white z-10 absolute">
-            {items.map((item, idx) => (
+            {items.map((item) => (
               <li
-                key={idx}
+                key={item}
                 role="option"
                 aria-selected={item === selected}
                 className="cursor-pointer p-2 transition-all duration-200 text-black border-b-3 border-transparent hover:border-[#00D08E]"

@@ -14,41 +14,49 @@ import { useTheme, type Theme } from "@mui/material/styles";
 import { IconButton, Tooltip as IconTooltip } from "@mui/material";
 import ZoomInIcon from "@mui/icons-material/ZoomIn";
 import ZoomOutMapIcon from "@mui/icons-material/ZoomOut";
-import { COLORS } from "../constants/constants";
+import { COLORS, PATHWAY_SEVERITY } from "../constants/constants";
 import ChartTooltip from "./ChartTooltip";
 import ChartLegend from "./ChartLegend";
-
-export type PathwayConfig = {
-  key: string;
-  color: string;
-  severity: number;
-};
 
 type GraphProps = {
   chartData: Record<string, number>[];
 };
-const getPathwaysWithColors = (theme: Theme) => [
-  { key: "Fragmented World", color: theme.palette.error.dark, severity: 6 },
-  { key: "Current Policies", color: theme.palette.error.light, severity: 5 },
-  { key: "NDCs", color: theme.palette.warning.main, severity: 4 },
-  { key: "Below 2C", color: theme.palette.primary.light, severity: 3 },
-  { key: "Net Zero 2050", color: COLORS.CYAN, severity: 2 },
-  { key: "Low Demand", color: COLORS.VIBRANT_GREEN, severity: 1 },
-];
+
+const getPathwayColor = (key: string, theme: Theme): string => {
+  const colorMap: Record<string, string> = {
+    "Fragmented World": theme.palette.error.dark,
+    "Current Policies": theme.palette.error.light,
+    "Delayed Transition": theme.palette.warning.main,
+    "NDCs": theme.palette.secondary.main,
+    "Below 2C": theme.palette.primary.light,
+    "Net Zero 2050": COLORS.CYAN,
+    "Low Demand": COLORS.VIBRANT_GREEN,
+  };
+  return colorMap[key] ?? COLORS.FALLBACK;
+};
 
 export default function Graph({ chartData }: GraphProps) {
   const theme = useTheme();
   const [zoomed, setZoomed] = useState(false);
 
-  const data = useMemo(() => getPathwaysWithColors(theme), [theme]);
+  const pathways = useMemo(() => {
+    const keys = new Set(chartData.flatMap((d) => Object.keys(d).filter((k) => k !== "year")));
+    return [...keys]
+      .map((key) => ({
+        key,
+        color: getPathwayColor(key, theme),
+        severity: PATHWAY_SEVERITY[key] ?? 0,
+      }))
+      .sort((a, b) => b.severity - a.severity);
+  }, [chartData, theme]);
 
   return (
     <div
       role="img"
       aria-label="Line chart showing financial impact across climate pathways"
-      className="w-full h-[50vh] sm:h-[70vh] p-3 sm:p-5"
+      className="w-full h-[50vh] sm:h-[70vh] p-3 sm:p-5 flex flex-col"
     >
-      <div className="flex justify-end">
+      <div className="flex justify-end shrink-0">
         <IconTooltip
           title={zoomed ? "Zoom Out" : "Zoom In"}
           aria-label={zoomed ? "Reset zoom" : "Zoom in"}
@@ -59,7 +67,7 @@ export default function Graph({ chartData }: GraphProps) {
         </IconTooltip>
       </div>
 
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height="100%" minHeight={0}>
         <LineChart
           data={chartData}
           margin={{ top: 20, right: 20, bottom: 20, left: 40 }}
@@ -86,7 +94,7 @@ export default function Graph({ chartData }: GraphProps) {
                 active={active}
                 payload={payload}
                 label={String(label)}
-                pathways={data}
+                pathways={pathways}
               />
             )}
           />
@@ -95,9 +103,9 @@ export default function Graph({ chartData }: GraphProps) {
             align="right"
             verticalAlign="top"
             wrapperStyle={{ marginTop: 10, marginRight: -20 }}
-            content={() => <ChartLegend pathways={data} />}
+            content={() => <ChartLegend pathways={pathways} />}
           />
-          {data.map((pathway) => (
+          {pathways.map((pathway) => (
             <Line
               key={pathway.key}
               type="monotone"
