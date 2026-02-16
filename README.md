@@ -48,7 +48,7 @@ npm run transform-data
 
 This reads `src/data/mock_data.csv` and generates `src/data/transformed_mock_data.json`. The dashboard uses this JSON as its data source.
 
-**Note:** There is no backend service because the dataset is static mock data and the focus is on frontend data transformation and visualisation.
+**Note:** There is no backend or database — the CSV is transformed to JSON at build time and served directly. A database like PostgreSQL was intentionally avoided to keep the project simple to set up and run, with no need to install, configure, or seed a separate database server. Since the dataset is static mock data, a database would add complexity without meaningful benefit.
 
 3. Start the development server
 
