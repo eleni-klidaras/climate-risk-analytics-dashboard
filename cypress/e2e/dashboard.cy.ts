@@ -21,7 +21,7 @@ describe("Climate Financial Risk Analytics", () => {
       .should("contain.text", "Long-term (2025-2034)");
 
     cy.get(".recharts-responsive-container").should("exist");
-    cy.get(".recharts-line").should("have.length", 6);
+    cy.get(".recharts-line").should("have.length", 7);
   });
 
   it("updates the chart when a different financial metric is selected", () => {
@@ -40,7 +40,7 @@ describe("Climate Financial Risk Analytics", () => {
       .should("contain.text", "DCF");
 
     cy.get(".recharts-responsive-container").should("exist");
-    cy.get(".recharts-line").should("have.length", 6);
+    cy.get(".recharts-line").should("have.length", 7);
   });
 
   it("updates the chart when a different timeframe is selected", () => {

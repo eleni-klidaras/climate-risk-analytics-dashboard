@@ -46,11 +46,11 @@ export default function App() {
             {error}
           </Alert>
         )}
-        {data === null && !error ? (
-          <p className="px-6 py-4">Loading...</p>
-        ) : chartData.length > 0 ? (
+        {data === null && !error && <p className="px-6 py-4">Loading...</p>}
+        {data !== null && chartData.length > 0 && (
           <Graph chartData={chartData} />
-        ) : (
+        )}
+        {data !== null && chartData.length === 0 && !error && (
           <p className="px-6 py-4">No data available.</p>
         )}
       </main>

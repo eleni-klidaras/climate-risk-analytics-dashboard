@@ -14,7 +14,7 @@ import { useTheme, type Theme } from "@mui/material/styles";
 import { IconButton, Tooltip as IconTooltip } from "@mui/material";
 import ZoomInIcon from "@mui/icons-material/ZoomIn";
 import ZoomOutMapIcon from "@mui/icons-material/ZoomOut";
-import { COLORS, PATHWAY_SEVERITY } from "../constants/constants";
+import { COLORS } from "../constants/constants";
 import ChartTooltip from "./ChartTooltip";
 import ChartLegend from "./ChartLegend";
 
@@ -22,30 +22,28 @@ type GraphProps = {
   chartData: Record<string, number>[];
 };
 
-const getPathwayColor = (key: string, theme: Theme): string => {
-  const colorMap: Record<string, string> = {
-    "Fragmented World": theme.palette.error.dark,
-    "Current Policies": theme.palette.error.light,
-    "Delayed Transition": theme.palette.warning.main,
-    "NDCs": theme.palette.secondary.main,
-    "Below 2C": theme.palette.primary.light,
-    "Net Zero 2050": COLORS.CYAN,
-    "Low Demand": COLORS.VIBRANT_GREEN,
-  };
-  return colorMap[key] ?? COLORS.FALLBACK;
-};
+const getPathwayConfig = (theme: Theme): Record<string, { color: string; severity: number }> => ({
+  "Fragmented World": { color: theme.palette.error.dark, severity: 7 },
+  "Current Policies": { color: theme.palette.error.light, severity: 6 },
+  "Delayed Transition": { color: theme.palette.warning.main, severity: 5 },
+  "NDCs": { color: theme.palette.secondary.main, severity: 4 },
+  "Below 2C": { color: theme.palette.primary.light, severity: 3 },
+  "Net Zero 2050": { color: COLORS.CYAN, severity: 2 },
+  "Low Demand": { color: COLORS.VIBRANT_GREEN, severity: 1 },
+});
 
 export default function Graph({ chartData }: GraphProps) {
   const theme = useTheme();
   const [zoomed, setZoomed] = useState(false);
 
   const pathways = useMemo(() => {
+    const config = getPathwayConfig(theme);
     const keys = new Set(chartData.flatMap((d) => Object.keys(d).filter((k) => k !== "year")));
     return [...keys]
       .map((key) => ({
         key,
-        color: getPathwayColor(key, theme),
-        severity: PATHWAY_SEVERITY[key] ?? 0,
+        color: config[key]?.color ?? COLORS.FALLBACK,
+        severity: config[key]?.severity ?? 0,
       }))
       .sort((a, b) => b.severity - a.severity);
   }, [chartData, theme]);
@@ -67,7 +65,8 @@ export default function Graph({ chartData }: GraphProps) {
         </IconTooltip>
       </div>
 
-      <ResponsiveContainer width="100%" height="100%" minHeight={0}>
+      <div className="flex-1 min-h-0">
+      <ResponsiveContainer width="100%" height="100%">
         <LineChart
           data={chartData}
           margin={{ top: 20, right: 20, bottom: 20, left: 40 }}
@@ -118,6 +117,7 @@ export default function Graph({ chartData }: GraphProps) {
           <Brush dataKey="year" height={20} stroke={COLORS.VIBRANT_GREEN} />
         </LineChart>
       </ResponsiveContainer>
+      </div>
     </div>
   );
 }

@@ -6,16 +6,6 @@ export const COLORS = {
   FALLBACK: "#888888",
 } as const;
 
-export const PATHWAY_SEVERITY: Record<string, number> = {
-  "Fragmented World": 7,
-  "Current Policies": 6,
-  "Delayed Transition": 5,
-  "NDCs": 4,
-  "Below 2C": 3,
-  "Net Zero 2050": 2,
-  "Low Demand": 1,
-};
-
 export const LINE_ITEMS: FinancialLineItem[] = ["EBIT", "FCFF", "DCF"];
 
 export const TIMEFRAMES: { label: string; value: Timeframe }[] = [
